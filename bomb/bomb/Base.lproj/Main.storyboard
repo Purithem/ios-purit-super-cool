@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bomb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Red_Dot" translatesAutoresizingMaskIntoConstraints="NO" id="8B3-0e-IER">
+                                <rect key="frame" x="9" y="63" width="192" height="134"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smaller-blue-dot-hi" translatesAutoresizingMaskIntoConstraints="NO" id="kWB-zd-lUg">
+                                <rect key="frame" x="209" y="63" width="125" height="136"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zto-nQ-V1T">
+                                <rect key="frame" x="126" y="390" width="123" height="33"/>
+                                <state key="normal" title="hide red"/>
+                                <connections>
+                                    <action selector="gohidered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1Q-E6-Riq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K12-3E-drh">
+                                <rect key="frame" x="136" y="446" width="102" height="30"/>
+                                <state key="normal" title="hide bule"/>
+                                <connections>
+                                    <action selector="gohideblue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80X-0R-Y0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bluedot" destination="kWB-zd-lUg" id="tn0-T7-MVC"/>
+                        <outlet property="hideblue" destination="K12-3E-drh" id="kw8-1Z-Cxv"/>
+                        <outlet property="hidered" destination="Zto-nQ-V1T" id="lfl-Fp-Q44"/>
+                        <outlet property="redbutton" destination="K12-3E-drh" id="u20-2w-tk6"/>
+                        <outlet property="reddot" destination="8B3-0e-IER" id="9xf-kn-Xps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="362.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Red_Dot" width="584" height="629"/>
+        <image name="smaller-blue-dot-hi" width="600" height="584"/>
+    </resources>
+</document>
